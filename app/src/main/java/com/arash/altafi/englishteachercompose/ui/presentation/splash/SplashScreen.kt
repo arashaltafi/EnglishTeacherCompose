@@ -21,7 +21,7 @@ import com.arash.altafi.englishteachercompose.utils.Constant
 @Composable
 fun SplashScreen(navController: NavController) {
     LaunchedEffect(Unit) {
-        delay(500000)
+        delay(5000)
         navController.navigate(Constant.Routes.LEARN) {
             popUpTo(Constant.Routes.SPLASH) {
                 inclusive = true
