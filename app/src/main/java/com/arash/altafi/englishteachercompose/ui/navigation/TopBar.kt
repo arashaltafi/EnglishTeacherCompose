@@ -46,13 +46,21 @@ fun TopBar(
     val currentBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = currentBackStackEntry?.destination?.route
 
+    val title = when (currentDestination) {
+        Constant.Routes.LEARN -> "مستر انگلیسی"
+        Constant.Routes.DICTIONARY -> "دیکشنری"
+        Constant.Routes.SETTING -> "تنظیمات"
+        Constant.Routes.PRONUNCIATION -> "تلفظ انگلیسی"
+        else -> "مستر انگلیسی"
+    }
+
     @OptIn(ExperimentalMaterial3Api::class)
     TopAppBar(
         modifier = Modifier
             .padding(10.dp)
             .clip(RoundedCornerShape(20.dp)),
         title = {
-            Text("اپلیکیشن تست")
+            Text(title)
         },
         navigationIcon = {
             Row {

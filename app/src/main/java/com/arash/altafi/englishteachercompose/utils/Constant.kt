@@ -4,6 +4,7 @@ object Constant {
     object CategoryRoutes {
         const val APP_ROUTES = "AppRoutes"
         const val AUTH_ROUTES = "AuthRoutes"
+        const val SPLASH_ROUTES = "SplashRoutes"
     }
 
     object Routes {

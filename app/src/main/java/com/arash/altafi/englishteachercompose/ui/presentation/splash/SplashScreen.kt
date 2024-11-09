@@ -18,7 +18,11 @@ import com.arash.altafi.englishteachercompose.utils.Constant
 fun SplashScreen(navController: NavController) {
     LaunchedEffect(Unit) {
         delay(5000)
-        navController.navigate(Constant.Routes.LEARN)
+        navController.navigate(Constant.Routes.LEARN) {
+            popUpTo(Constant.Routes.SPLASH) {
+                inclusive = true
+            }
+        }
     }
     Box(
         modifier = Modifier

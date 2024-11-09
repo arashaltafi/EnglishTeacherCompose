@@ -28,6 +28,12 @@ fun Navigation(
         modifier = Modifier.padding(innerPadding)
     ) {
         composable(
+            route = Constant.Routes.LEARN
+        ) {
+            LearnScreen(navController)
+        }
+
+        composable(
             route = Constant.Routes.SPLASH
         ) {
             SplashScreen(navController)
@@ -54,11 +60,6 @@ fun Navigation(
             route = Constant.CategoryRoutes.APP_ROUTES,
             startDestination = Constant.Routes.LEARN
         ) {
-            composable(
-                route = Constant.Routes.LEARN
-            ) {
-                LearnScreen(navController)
-            }
             composable(
                 route = Constant.Routes.SETTING
             ) {

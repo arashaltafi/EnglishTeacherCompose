@@ -1,6 +1,5 @@
 package com.arash.altafi.englishteachercompose
 
-import android.app.Activity
 import androidx.compose.runtime.*
 import androidx.navigation.compose.*
 import androidx.compose.animation.*
