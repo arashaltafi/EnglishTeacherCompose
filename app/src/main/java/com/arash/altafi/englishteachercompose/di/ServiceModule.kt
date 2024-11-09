@@ -15,7 +15,7 @@ object ServiceModule {
 
     @Singleton
     @Provides
-    fun provideApiService(@Named("jsonPlaceHolder") retrofit: Retrofit): ApiService =
+    fun provideApiService(@Named("arashaltafi") retrofit: Retrofit): ApiService =
         retrofit.create(ApiService::class.java)
 
 }

@@ -4,6 +4,7 @@ import androidx.datastore.preferences.core.Preferences
 import com.arash.altafi.englishteachercompose.data.db.FavoriteUserDao
 import com.arash.altafi.englishteachercompose.data.remote.ApiService
 import com.arash.altafi.englishteachercompose.data.repository.DataStoreRepository
+import com.arash.altafi.englishteachercompose.data.repository.LearnRepository
 import com.arash.altafi.englishteachercompose.data.repository.UserRepository
 import com.arash.altafi.englishteachercompose.utils.EncryptionUtils
 import dagger.Module
@@ -22,6 +23,12 @@ object RepositoryModule {
         apiService: ApiService,
         favoriteUserDao: FavoriteUserDao
     ) = UserRepository(apiService, favoriteUserDao)
+
+    @Singleton
+    @Provides
+    fun provideLearnRepository(
+        apiService: ApiService,
+    ) = LearnRepository(apiService)
 
     @Singleton
     @Provides
